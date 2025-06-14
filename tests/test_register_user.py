@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 
 
 def test_register_user():
-    service = ChromeService(executable_path="/opt/homebrew/bin/chromedriver")
-    driver = webdriver.Chrome(service=service)
+    service = webdriver.ChromeService()  # Mac
+    driver = webdriver.Chrome(service=service)  # Mac
 
     random_number = random.randint(1000, 9999)
     unique_email = f"test{random_number}@test.pl"
