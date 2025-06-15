@@ -15,11 +15,12 @@ class LoginpageLocators:
 
 
 class RegPage(BasePage):
-    def enter_reg_email(self, email):
+    def enter_reg_email(self):
         email = os.environ.get("EMAIL")
         self.driver.find_element(*LoginpageLocators.REG_EMAIL_OF_USER).send_keys(email)
 
-    def enter_reg_password(self, password):
+    def enter_reg_password(self):
+        password = os.environ.get("PASSWORD")
         self.driver.find_element(*LoginpageLocators.REG_PASSWORD_OF_A_USER).send_keys(password)
 
     def click_reg_button(self):

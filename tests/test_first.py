@@ -1,5 +1,4 @@
 import unittest
-import os
 from selenium import webdriver
 from page.home_page import HomePage
 from page.login_page import LoginPage, RegPage
