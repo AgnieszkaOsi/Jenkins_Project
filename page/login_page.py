@@ -1,6 +1,7 @@
 from page.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+import os
 
 class LoginpageLocators:
     REG_EMAIL_OF_USER = (By.ID, "reg_email")
@@ -15,6 +16,7 @@ class LoginpageLocators:
 
 class RegPage(BasePage):
     def enter_reg_email(self, email):
+        email = os.environ.get("EMAIL")
         self.driver.find_element(*LoginpageLocators.REG_EMAIL_OF_USER).send_keys(email)
 
     def enter_reg_password(self, password):
